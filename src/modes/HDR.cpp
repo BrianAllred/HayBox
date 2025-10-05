@@ -45,10 +45,13 @@ void HDR::UpdateDigitalOutputs(const InputState &inputs, OutputState &outputs) {
     // layer.
     outputs.dpadUp = outputs.dpadUp || inputs.rf8;
 
-    if (inputs.mb3)
-        outputs.dpadLeft = true;
-    if (inputs.mb2)
-        outputs.dpadRight = true;
+    if (inputs.lt1 && !inputs.lt2) {
+        outputs.select = inputs.mb1;
+    } else if (!inputs.lt1 && inputs.lt2) {
+        outputs.home = inputs.mb1;
+    } else if ((inputs.lt1 && inputs.lt2) || inputs.nunchuk_c) {
+        outputs.capture = inputs.mb1;
+    }
 }
 
 void HDR::UpdateAnalogOutputs(const InputState &inputs, OutputState &outputs) {
