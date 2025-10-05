@@ -121,6 +121,12 @@ const Config default_config = {
         .has_custom_airdodge = false,
         .custom_airdodge = { .x = 0, .y = 0 },
     },
+    .has_hdr_options = true,
+    .hdr_options = {
+        .disable_ledgedash_socd_override = false,
+        .has_custom_airdodge = false,
+        .custom_airdodge = { .x = 0, .y = 0 },
+    },
 };
 
 // clang-format on

@@ -43,6 +43,8 @@ constexpr const char *gamemode_name(GameModeId mode_id) {
             return "Rivals";
         case MODE_RIVALS_2:
             return "Rivals 2";
+        case MODE_HDR:
+            return "HewDraw Remix";
         case MODE_KEYBOARD:
             return "Keyboard";
         default:
